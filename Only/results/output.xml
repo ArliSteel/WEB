@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.0 on win32)" generated="2024-11-12T23:12:34.194715" rpa="false" schemaversion="5">
+<suite id="s1" name="Only" source="C:\Users\arlis\OneDrive\Рабочий стол\Only">
+<suite id="s1-s1" name="Tests" source="C:\Users\arlis\OneDrive\Рабочий стол\Only\Tests">
+<suite id="s1-s1-s1" name="1 Checking the footer on all the main pages of the site" source="C:\Users\arlis\OneDrive\Рабочий стол\Only\Tests\1_Checking_the_footer_on_all_the_main_pages_of_the_site.robot">
+<kw name="Open Browser To Main Page" owner="only_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:34.466361" level="INFO">Opening browser 'Chrome' to base url 'https://only.digital'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-12T23:12:34.465360" elapsed="3.531447"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-11-12T23:12:37.996807" elapsed="0.002007"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-12T23:12:37.999808" elapsed="0.091684"/>
+</kw>
+<doc>Открытие браузера и переход на основную страницу.</doc>
+<status status="PASS" start="2024-11-12T23:12:34.464392" elapsed="3.627100"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Checking the footer on all the main pages of the site" line="9">
+<kw name="Check Footer Elements" owner="only_keywords">
+<for flavor="IN">
+<iter>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:38.098505" level="INFO">Opening url 'https://only.digital/'</msg>
+<arg>${BASE_URL}${page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-12T23:12:38.097505" elapsed="2.721512"/>
+</kw>
+<kw name="Scroll Page To Bottom" owner="only_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:40.820018" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-12T23:12:40.820018" elapsed="0.116279"/>
+</kw>
+<doc>Скроллинг страницы до самого низа.</doc>
+<status status="PASS" start="2024-11-12T23:12:40.820018" elapsed="0.116279"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FOOTER_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:40.936297" elapsed="0.100708"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NUMBER_MAIL_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:41.038006" elapsed="0.059621"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SOCIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:41.097627" elapsed="0.057111"/>
+</kw>
+<var name="${page}">/</var>
+<status status="PASS" start="2024-11-12T23:12:38.096505" elapsed="3.058233"/>
+</iter>
+<iter>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:41.155738" level="INFO">Opening url 'https://only.digital/projects'</msg>
+<arg>${BASE_URL}${page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-12T23:12:41.155738" elapsed="1.080663"/>
+</kw>
+<kw name="Scroll Page To Bottom" owner="only_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:42.237400" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-12T23:12:42.237400" elapsed="0.030559"/>
+</kw>
+<doc>Скроллинг страницы до самого низа.</doc>
+<status status="PASS" start="2024-11-12T23:12:42.236401" elapsed="0.032560"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FOOTER_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:42.268961" elapsed="0.099706"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NUMBER_MAIL_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:42.368667" elapsed="0.054619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SOCIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:42.424293" elapsed="0.053595"/>
+</kw>
+<var name="${page}">/projects</var>
+<status status="PASS" start="2024-11-12T23:12:41.155738" elapsed="1.323149"/>
+</iter>
+<iter>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:42.479887" level="INFO">Opening url 'https://only.digital/company'</msg>
+<arg>${BASE_URL}${page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-12T23:12:42.478887" elapsed="4.211375"/>
+</kw>
+<kw name="Scroll Page To Bottom" owner="only_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:46.691766" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-12T23:12:46.690262" elapsed="0.091382"/>
+</kw>
+<doc>Скроллинг страницы до самого низа.</doc>
+<status status="PASS" start="2024-11-12T23:12:46.690262" elapsed="0.091382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FOOTER_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:46.782650" elapsed="0.197482"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NUMBER_MAIL_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:46.980132" elapsed="0.162329"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SOCIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:47.143468" elapsed="0.110602"/>
+</kw>
+<var name="${page}">/company</var>
+<status status="PASS" start="2024-11-12T23:12:42.478887" elapsed="4.775183"/>
+</iter>
+<iter>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:47.255070" level="INFO">Opening url 'https://only.digital/job'</msg>
+<arg>${BASE_URL}${page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-12T23:12:47.254070" elapsed="3.976615"/>
+</kw>
+<kw name="Scroll Page To Bottom" owner="only_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:51.232190" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.231684" elapsed="0.020027"/>
+</kw>
+<doc>Скроллинг страницы до самого низа.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.230685" elapsed="0.021026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FOOTER_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.252217" elapsed="0.021040"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NUMBER_MAIL_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.273257" elapsed="0.011518"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SOCIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.284775" elapsed="0.011340"/>
+</kw>
+<var name="${page}">/job</var>
+<status status="PASS" start="2024-11-12T23:12:47.254070" elapsed="4.042045"/>
+</iter>
+<iter>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:51.297117" level="INFO">Opening url 'https://only.digital/contacts'</msg>
+<arg>${BASE_URL}${page}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.297117" elapsed="0.501678"/>
+</kw>
+<kw name="Scroll Page To Bottom" owner="only_keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-12T23:12:51.800795" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.799794" elapsed="0.179914"/>
+</kw>
+<doc>Скроллинг страницы до самого низа.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.798795" elapsed="0.180913"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FOOTER_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:51.980706" elapsed="0.037602"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NUMBER_MAIL_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:52.018308" elapsed="0.306177"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SOCIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-12T23:12:52.324485" elapsed="0.055594"/>
+</kw>
+<var name="${page}">/contacts</var>
+<status status="PASS" start="2024-11-12T23:12:51.296115" elapsed="1.083964"/>
+</iter>
+<var>${page}</var>
+<value>@{PAGES}</value>
+<status status="PASS" start="2024-11-12T23:12:38.095506" elapsed="14.284573"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-12T23:12:52.380079" elapsed="2.355868"/>
+</kw>
+<doc>Проверка наличия футера страницах.</doc>
+<status status="PASS" start="2024-11-12T23:12:38.094504" elapsed="16.641443"/>
+</kw>
+<doc>Проверка наличия футера на всех основных страницах сайта.</doc>
+<status status="PASS" start="2024-11-12T23:12:38.091492" elapsed="16.645402"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-12T23:12:54.738895" elapsed="0.000000"/>
+</kw>
+<doc>Настройки для теста</doc>
+<status status="PASS" start="2024-11-12T23:12:34.233728" elapsed="20.505167"/>
+</suite>
+<status status="PASS" start="2024-11-12T23:12:34.230209" elapsed="20.512234"/>
+</suite>
+<status status="PASS" start="2024-11-12T23:12:34.199716" elapsed="20.544715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Only">Only</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Only.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="1 Checking the footer on all the main pages of the site">Only.Tests.1 Checking the footer on all the main pages of the site</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
